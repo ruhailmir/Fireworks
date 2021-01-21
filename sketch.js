@@ -1,6 +1,6 @@
 /*
-	@name : Firework simulation in p5.js
-	@author : Ruahil Mir
+	@name : Fireworks simulation in p5.js
+	@author : Ruhail Mir
 	@instagram: ruhailmir
 	@twitter: ruhailmir77
 */

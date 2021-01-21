@@ -8,7 +8,7 @@
 let fireworks = [];
 // to start the animation on mouse click.
 let commence = false;
-// const, whether the Particle shoud have trials.
+// const, whether the Particle shoud have trails.
 const TRAIL = 1;
 
 // initialize all the vars.
@@ -48,7 +48,7 @@ function draw() {
 
 	if ( commence ) {
 		// redraw the canvas every frame.
-		// with alpha, to make it appear smoother with trials.
+		// with alpha, to make it appear smoother with trails.
 		background(0, 0, 0, .3);
 
 		if ( frameCount % 20 == 0 ) {

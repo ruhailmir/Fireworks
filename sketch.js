@@ -1,19 +1,39 @@
+/*
+	@name : Firework simulation in p5.js
+	@author : Ruahil Mir
+	@instagram: ruhailmir
+	@twitter: ruhailmir77
+*/
+
 let fireworks = [];
+// to start the animation on mouse click.
 let commence = false;
+// const, whether the Particle shoud have trials.
 const TRAIL = 1;
 
-function setup(){
+// initialize all the vars.
+function setup() {
+	// for fullscreen
+	// fullscreen();
 	createCanvas(1366, 764);
 	// createCanvas(600, 500);
+	// to get nice colors.
 	colorMode(HSB);
+	// slow down the animation.
 	frameRate(46);
 }
 
 function mousePressed() {
-	commence = !commence;
+	// start the animation on mouse click.
+	// for both starting and stopping.
+	// commence = !commence;
+	// for starting only.
+	commence = true;
 }
 
 function draw() {
+	// redraw the canvas every frame.
+	// with alpha, to make it appear smoother with trials.
 	background(0, 0, 0, .3);
 
 	if ( commence ) {
@@ -35,6 +55,7 @@ function draw() {
 			firework.boomMe();
 		}
 
+		// Free the memory...
 		if ( fireworks.length > 10 ) {
 			fireworks = fireworks.splice(1, fireworks.length);
 		}

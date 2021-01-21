@@ -15,12 +15,25 @@ const TRAIL = 1;
 function setup() {
 	// for fullscreen
 	// fullscreen();
-	createCanvas(1366, 764);
+
+	// custom size
+	// createCanvas(1366, 764);
 	// createCanvas(600, 500);
+
+	// responsive size.
+	createCanvas(window.innerWidth, window.innerHeight);
+
 	// to get nice colors.
 	colorMode(HSB);
 	// slow down the animation.
 	frameRate(46);
+
+	//
+	background(244, 0, 0);
+	noStroke();
+	fill(244);
+	textSize(20);
+	text("Click to Begin!", (width/2) - (70), height/2);
 }
 
 function mousePressed() {
@@ -32,11 +45,12 @@ function mousePressed() {
 }
 
 function draw() {
-	// redraw the canvas every frame.
-	// with alpha, to make it appear smoother with trials.
-	background(0, 0, 0, .3);
 
 	if ( commence ) {
+		// redraw the canvas every frame.
+		// with alpha, to make it appear smoother with trials.
+		background(0, 0, 0, .3);
+
 		if ( frameCount % 20 == 0 ) {
 			for ( let i = 0; i < 1; i++ ) {
 				let t = createVector(random(width), 100);

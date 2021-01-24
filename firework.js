@@ -28,7 +28,7 @@ class Firework {
   }
 
   boomMe() {
-    // when the firework reaches the target and starts to fall background
+    // when the firework reaches the target and starts to fall
     // due to gravity its velocity decreases nearly to 0.
     if ( this.vel.mag() <= .1 ) {
       this.trails = [];
